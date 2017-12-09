@@ -1,0 +1,15 @@
+<h1>Artístas</h1>
+ 
+  <% @artists.each do |artist| %>
+      <p>
+      	<strong><%= artist.name %></strong>	
+      </p>
+      <p>
+      	<%= image_tag artist.image_url %>
+      </p>
+      <td><%= link_to 'Ver', artist_path(artist) %></td>
+      <td><%= link_to 'Editar', edit_artist_path(artist) %></td>
+      <td><%= link_to 'Borrar', artist_path(artist), method: :delete, data: { confirm: '¿Estás seguro?' } %></td>
+  <% end %>
+
+  <%= link_to 'Nuevo Artísta', new_artist_path %>
