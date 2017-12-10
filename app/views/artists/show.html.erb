@@ -1,9 +1,17 @@
 <p>
   <%= image_tag @artist.image_url %>
 </p>
+
 <p>
   <strong><%= @artist.name %></strong> 
 </p>
+
+<h2>Albums</h2>
+<%= render @artist.albums %>
+
+<h2>Añadir un Album:</h2>
+<%= render 'albums/form' %>
  
 <%= link_to 'Volver', artists_path %>
 <%= link_to 'Editar', edit_artist_path(@artist) %>
+<%= link_to 'Borrar', artist_path(@artist), method: :delete, data: { confirm: '¿Estás seguro?' } %>

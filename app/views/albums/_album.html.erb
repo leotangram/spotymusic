@@ -1,0 +1,17 @@
+<p>
+	<strong><%= album.name %></strong> 
+</p>
+<p>
+	<%= album.released_at %>
+</p>
+<p>
+	<%= image_tag album.image_url %>
+</p>
+
+<p>
+	<%= link_to 'Borrar Album', [album.artist, album],
+	method: :delete,
+    data: { confirm: '¿Estás seguro?' } %>
+</p>
+
+

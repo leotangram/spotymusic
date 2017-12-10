@@ -1,0 +1,17 @@
+<%= form_for([@artist, @artist.albums.build]) do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :released_at %><br>
+    <%= f.date_field :released_at %>
+  </p>
+  <p>
+    <%= f.label :image_url %><br>
+    <%= f.text_field :image_url %>
+  </p>
+  <p>
+    <%= f.submit 'Guardar Album' %>
+  </p>
+<% end %>

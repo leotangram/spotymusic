@@ -36,10 +36,10 @@ class ArtistsController < ApplicationController
   end
 
   def destroy
-    @articulo = Articulo.find(params[:id])
-    @articulo.destroy
+    @artist = Artist.find(params[:id])
+    @artist.destroy
  
-    redirect_to articulos_path
+    redirect_to artists_path
   end
 
   private
